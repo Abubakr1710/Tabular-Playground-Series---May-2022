@@ -4,8 +4,6 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 
 from sklearn.preprocessing import StandardScaler
-from sklearn.impute import  SimpleImputer
-from sklearn.preprocessing import OrdinalEncoder
 from sklearn import pipeline
 from sklearn import compose
 import time
@@ -87,3 +85,6 @@ print(mod_res)
 #1  Random Forest  82.442088  82.376508  424.815111
 #2    Extra Trees  79.629966  79.541862  188.617821
 #3  Decision Tree  72.365657  72.346663   33.526589
+
+
+model  = classifiers[3]

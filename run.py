@@ -16,7 +16,7 @@ from sklearn.ensemble      import AdaBoostClassifier
 from sklearn.ensemble      import GradientBoostingClassifier
 from sklearn.ensemble      import HistGradientBoostingClassifier
 #from xgboost               import XGBClassifier
-#from lightgbm              import LGBMClassifier
+from lightgbm              import LGBMClassifier
 #from catboost              import CatBoostClassifier
 
 
@@ -29,13 +29,13 @@ X, y = df.drop(['target'], axis=1), df['target']
 def classifier():
     tree_classifiers = {
     "Decision Tree": DecisionTreeClassifier(),
-    "Extra Trees": ExtraTreesClassifier(),
-    "Random Forest": RandomForestClassifier(),
+    #"Extra Trees": ExtraTreesClassifier(),
+    #"Random Forest": RandomForestClassifier(),
     #"AdaBoost": AdaBoostClassifier(),
     #"Skl GBM": GradientBoostingClassifier(),
     #"Skl HistGBM":HistGradientBoostingClassifier(),
     #"XGBoost": XGBClassifier(),
-    #"LightGBM": LGBMClassifier(),
+    "LightGBM": LGBMClassifier()
     #"CatBoost": CatBoostClassifier()
     }
 
@@ -83,8 +83,6 @@ print(mod_res)
 
 #        Model      Accuracy   Bal Acc.        Time
 #1  Random Forest  82.442088  82.376508  424.815111
-#2    Extra Trees  79.629966  79.541862  188.617821
-#3  Decision Tree  72.365657  72.346663   33.526589
-
-
-model  = classifiers[3]
+#2       LightGBM  81.886195  81.843292   6.790647
+#3    Extra Trees  79.629966  79.541862  188.617821
+#4  Decision Tree  72.365657  72.346663   33.526589

@@ -28,7 +28,7 @@ X, y = df.drop(['target'], axis=1), df['target']
 
 def classifier():
     tree_classifiers = {
-    "Decision Tree": DecisionTreeClassifier(),
+    #"Decision Tree": DecisionTreeClassifier(),
     #"Extra Trees": ExtraTreesClassifier(),
     #"Random Forest": RandomForestClassifier(),
     #"AdaBoost": AdaBoostClassifier(),
